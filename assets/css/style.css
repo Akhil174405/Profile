@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background: url("../img/Akhil_bg1.jpg") bottom center;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 #hero:before {
   content: "";
@@ -383,7 +383,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 40px;

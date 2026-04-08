@@ -1281,10 +1281,10 @@
       <h4>RAG & Vector Search</h4>
       <div class="skill-pills">
         <span class="pill">Hybrid RAG</span>
-        <span class="pill">FAISS + BM25</span>
+        <span class="pill">Qdrant + BM25</span>
         <span class="pill">Cross-Encoder Reranking</span>
-        <span class="pill">Qdrant</span>
         <span class="pill">Chroma</span>
+        <span class="pill">FAISS</span>
         <span class="pill">pgvector</span>
       </div>
     </div>
@@ -1353,8 +1353,8 @@
       <div class="tl-role">Data Scientist</div>
       <div class="tl-company">DEFTeam Solutions Private Limited · Hyderabad</div>
       <ul class="tl-bullets">
-        <li>Designed a structured document reasoning pipeline combining hybrid retrieval (FAISS + BM25), cross-encoder reranking, and a sentence-level reasoning layer — improving temporal and multi-hop QA accuracy from ≈66% to ≈92%.</li>
-        <li>Built an Agentic RAG chatbot using OpenAI Agents SDK and DeepSeek via Ollama, with Anthropic's Contextual Retrieval strategy (context prepended to chunks before embedding) stored in Qdrant.</li>
+        <li>Designed a structured document reasoning pipeline for complex QA over long-form documents, combining hybrid retrieval (Qdrant vector search + BM25), cross-encoder reranking, and a sentence-level reasoning layer — improving temporal and multi-hop accuracy from ≈66% to ≈92%.</li>
+        <li>Built an Agentic RAG chatbot using OpenAI Agents SDK and DeepSeek via Ollama, where the agent dynamically orchestrates retrieval and reranking tools with Anthropic’s contextual retrieval strategy (context-prepended chunks before embedding), using Qdrant for vector search with metadata-based filtering.</li>
         <li>Built a real-time facial recognition system using DeepFace embeddings and cosine similarity, deployed as a containerized RESTful service via FastAPI and Docker with a React frontend.</li>
         <li>Translated complex SAS analytics into efficient Python pipelines achieving ≈70% faster execution for a US healthcare client.</li>
         <li>Built a custom Grafana datasource plugin from scratch for an OPC-UA server, enabling real-time industrial data streaming.</li>
@@ -1395,17 +1395,16 @@
         </div>
         <div class="proj-stack">
           <span class="stag">OpenAI Agents SDK</span>
-          <span class="stag">FAISS+BM25</span>
+          <span class="stag">BM25 + Dense Retrieval</span>
           <span class="stag">Cross-Encoder</span>
           <span class="stag">Qdrant</span>
-          <span class="stag">PostgreSQL</span>
           <span class="stag">AsyncIO</span>
         </div>
       </div>
       <div>
         <ul class="proj-bullets">
           <li>Diagnosed key limitations in baseline RAG (~66% accuracy on temporal queries) using a targeted evaluation benchmark.</li>
-          <li>Improved retrieval to ~80% with hybrid search (FAISS + BM25) and cross-encoder reranking.</li>
+          <li>Improved retrieval to ~80% with hybrid search (BM25 + dense retrieval) and cross-encoder reranking.</li>
           <li>Built a structured reasoning layer capturing entity state, custody transitions, reported speech, and causal relationships at sentence level — boosting accuracy to ~92%.</li>
           <li>Enabled traceable, auditable outputs grounded in explicit intermediate state logs.</li>
           <li>Implemented async processing for scalable document ingestion and query execution.</li>
@@ -1417,12 +1416,15 @@
       <div class="proj-num">02</div>
       <div class="proj-type type-ai"><i class="fas fa-comments"></i> Agentic RAG</div>
       <div class="proj-title">Agentic RAG Chatbot over Local PDFs</div>
-      <div class="proj-desc">Fully offline Agentic RAG chatbot using OpenAI Agents SDK. Agent dynamically invokes retrieval and reranking tools — refining queries iteratively. Uses Anthropic's Contextual Retrieval (context prepended to chunks before embedding) stored in Qdrant.</div>
+      <div class="proj-desc">Fully offline Agentic RAG chatbot using OpenAI Agents SDK. 
+Agent dynamically orchestrates retrieval and reranking tools — refining queries iteratively. 
+Uses Anthropic's Contextual Retrieval (context prepended to chunks before embedding) 
+with Qdrant for vector search and metadata-based filtering.</div>
       <div class="proj-stack">
         <span class="stag">OpenAI Agents SDK</span>
         <span class="stag">LangChain</span>
         <span class="stag">Qdrant</span>
-        <span class="stag">FAISS+BM25</span>
+        <span class="stag">BM25 + Dense Retrieval</span>
         <span class="stag">DeepSeek</span>
         <span class="stag">FastAPI</span>
       </div>
